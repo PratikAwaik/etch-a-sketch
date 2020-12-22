@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Etch-A-Sketch</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Etch-a-sketch</title>
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Etch-A-Sketch</h1>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="64" value="32" class="slider" id="myRange">
-            <p>Grid Size: <span id="grid-size"></span></p>
-        </div>
-        <div id="buttons">
-            <button id="reset">Reset Grid</button>
-            <button id="rgb">Random RGB</button>
-            <button id="grayscale">Random GrayScale</button>
-            <div id="user-input">
-                <input id="user-color" type="text" placeholder="Any other color?">
-                <button id="user-color-set">Set</button> 
+        <h1>Etch-a-Sketch</h1>
+        <main>
+            <div id="pad-slider">
+                <h2 id="value">Size: </h2>
+                <input id="slider" type="range" min="1" max="64">
+                <div id="sketch-pad"></div>
             </div>
-            <button id="erase">Erase</button>
-        </div>
-        <div id="grid"></div>
-        <script src="script.js"></script>
+            <div id="buttons">
+                <button class="options" id="red">Red</button>
+                <button class="options" id="clear">Clear</button>
+                <button class="options" id="eraser">Eraser</button>
+                <button class="options" id="random">Random</button>
+                <button class="options" id="grayscale">Random Gray</button>
+                <input id="color-selector" type="color">
+            </div>
+        </main>
+        <script src="scripts/main.js"></script>
     </body>
 </html>
